@@ -72,7 +72,7 @@
                               <h4>111-Afrah Almutairy</h4>
 
                               <p>
-                                  Hello. I'm a student of information systems at Princess Nourah Bint Abdulrahman University.
+                                  . I'm a student of information systems at Princess Nourah Bint Abdulrahman University.
                                   I hope to learn more about security and web development.
                               </p>
                               <div class="social">
