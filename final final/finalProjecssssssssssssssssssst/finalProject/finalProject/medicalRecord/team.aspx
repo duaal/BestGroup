@@ -186,7 +186,7 @@
                               <p>
                                   Hello , I’m Computer Science student at Shaqra University Department of Computer and Information Technology
                                   Interested in Web Development
-                                  Such as C# , HTML , CSS , JS .
+                                  Such as C# , HTML , CSS ,  .
                               </p>
                               <div class="social">
                                             <a href="mailto:iialmanie@gmail.com "><i class="fas fa-envelope"></i></a>
