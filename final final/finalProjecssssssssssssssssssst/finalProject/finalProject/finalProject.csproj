@@ -1,0 +1,975 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{BE4EC679-B991-4006-A7F3-EC3872ECB9F9}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>finalProject</RootNamespace>
+    <AssemblyName>finalProject</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="AspNet.ScriptManager.bootstrap">
+      <HintPath>..\packages\AspNet.ScriptManager.bootstrap.3.3.7\lib\net45\AspNet.ScriptManager.bootstrap.dll</HintPath>
+    </Reference>
+    <Reference Include="AspNet.ScriptManager.jQuery">
+      <HintPath>..\packages\AspNet.ScriptManager.jQuery.3.3.1\lib\net45\AspNet.ScriptManager.jQuery.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ScriptManager.MSAjax">
+      <HintPath>..\packages\Microsoft.AspNet.ScriptManager.MSAjax.5.0.0\lib\net45\Microsoft.ScriptManager.MSAjax.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ScriptManager.WebForms">
+      <HintPath>..\packages\Microsoft.AspNet.ScriptManager.WebForms.5.0.0\lib\net45\Microsoft.ScriptManager.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Web.Optimization.WebForms">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.WebForms.1.1.3\lib\net45\Microsoft.AspNet.Web.Optimization.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.FriendlyUrls">
+      <HintPath>..\packages\Microsoft.AspNet.FriendlyUrls.Core.1.0.2\lib\net45\Microsoft.AspNet.FriendlyUrls.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="About.aspx" />
+    <Content Include="Contact.aspx" />
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Site.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="medicalRecord\adminStyle\bootstrap\css\bootstrap.min.css" />
+    <Content Include="medicalRecord\adminStyle\bootstrap\js\bootstrap.min.js" />
+    <Content Include="medicalRecord\adminStyle\css\Login-Form-Clean.css" />
+    <Content Include="medicalRecord\adminStyle\css\styles.css" />
+    <Content Include="medicalRecord\adminStyle\css\untitled.css" />
+    <Content Include="medicalRecord\adminStyle\fonts\font-awesome.min.css" />
+    <Content Include="medicalRecord\adminStyle\fonts\fontawesome-webfont.svg" />
+    <Content Include="medicalRecord\adminStyle\fonts\ionicons.min.css" />
+    <Content Include="medicalRecord\adminStyle\fonts\ionicons.svg" />
+    <Content Include="medicalRecord\adminStyle\img\1280x1024.png" />
+    <Content Include="medicalRecord\adminStyle\img\about\1.jpg" />
+    <Content Include="medicalRecord\adminStyle\img\about\2.jpg" />
+    <Content Include="medicalRecord\adminStyle\img\about\3.jpg" />
+    <Content Include="medicalRecord\adminStyle\img\about\4.jpg" />
+    <Content Include="medicalRecord\adminStyle\img\account.png" />
+    <Content Include="medicalRecord\adminStyle\img\backeground.jpeg" />
+    <Content Include="medicalRecord\adminStyle\img\clients\creative-market.jpg" />
+    <Content Include="medicalRecord\adminStyle\img\clients\designmodo.jpg" />
+    <Content Include="medicalRecord\adminStyle\img\clients\envato.jpg" />
+    <Content Include="medicalRecord\adminStyle\img\clients\themeforest.jpg" />
+    <Content Include="medicalRecord\adminStyle\img\تنزيل-removebg-preview.png" />
+    <Content Include="medicalRecord\adminStyle\img\header-bg.jpg" />
+    <Content Include="medicalRecord\adminStyle\img\map-image.png" />
+    <Content Include="medicalRecord\adminStyle\img\portfolio\1-full.jpg" />
+    <Content Include="medicalRecord\adminStyle\img\portfolio\1-thumbnail.jpg" />
+    <Content Include="medicalRecord\adminStyle\img\portfolio\2-full.jpg" />
+    <Content Include="medicalRecord\adminStyle\img\portfolio\2-thumbnail.jpg" />
+    <Content Include="medicalRecord\adminStyle\img\portfolio\3-full.jpg" />
+    <Content Include="medicalRecord\adminStyle\img\portfolio\3-thumbnail.jpg" />
+    <Content Include="medicalRecord\adminStyle\img\portfolio\4-full.jpg" />
+    <Content Include="medicalRecord\adminStyle\img\portfolio\4-thumbnail.jpg" />
+    <Content Include="medicalRecord\adminStyle\img\portfolio\5-full.jpg" />
+    <Content Include="medicalRecord\adminStyle\img\portfolio\5-thumbnail.jpg" />
+    <Content Include="medicalRecord\adminStyle\img\portfolio\6-full.jpg" />
+    <Content Include="medicalRecord\adminStyle\img\portfolio\6-thumbnail.jpg" />
+    <Content Include="medicalRecord\adminStyle\img\team\1.jpg" />
+    <Content Include="medicalRecord\adminStyle\img\team\2.jpg" />
+    <Content Include="medicalRecord\adminStyle\img\team\3.jpg" />
+    <Content Include="medicalRecord\adminStyle\img\WhatsApp Image 2020-06-30 at 12.52.23 PM %281%29.jpeg" />
+    <Content Include="medicalRecord\adminStyle\js\agency.js" />
+    <Content Include="medicalRecord\adminStyle\js\jquery.min.js" />
+    <Content Include="medicalRecord\assets\bootstrap\css\bootstrap.min.css" />
+    <Content Include="medicalRecord\assets\bootstrap\js\bootstrap.min.js" />
+    <Content Include="medicalRecord\assets\css\untitled.css" />
+    <Content Include="medicalRecord\assets\fonts\font-awesome.min.css" />
+    <Content Include="medicalRecord\assets\fonts\fontawesome-webfont.svg" />
+    <Content Include="medicalRecord\assets\img\about\1.jpg" />
+    <Content Include="medicalRecord\assets\img\about\2.jpg" />
+    <Content Include="medicalRecord\assets\img\about\3.jpg" />
+    <Content Include="medicalRecord\assets\img\about\4.jpg" />
+    <Content Include="medicalRecord\assets\img\backeground.jpeg" />
+    <Content Include="medicalRecord\assets\img\clients\creative-market.jpg" />
+    <Content Include="medicalRecord\assets\img\clients\designmodo.jpg" />
+    <Content Include="medicalRecord\assets\img\clients\envato.jpg" />
+    <Content Include="medicalRecord\assets\img\clients\themeforest.jpg" />
+    <Content Include="medicalRecord\assets\img\برء-removebg-preview.png" />
+    <Content Include="medicalRecord\assets\img\map-image.png" />
+    <Content Include="medicalRecord\assets\img\portfolio\1-full.jpg" />
+    <Content Include="medicalRecord\assets\img\portfolio\1-thumbnail.jpg" />
+    <Content Include="medicalRecord\assets\img\portfolio\2-full.jpg" />
+    <Content Include="medicalRecord\assets\img\portfolio\2-thumbnail.jpg" />
+    <Content Include="medicalRecord\assets\img\portfolio\3-full.jpg" />
+    <Content Include="medicalRecord\assets\img\portfolio\3-thumbnail.jpg" />
+    <Content Include="medicalRecord\assets\img\portfolio\4-full.jpg" />
+    <Content Include="medicalRecord\assets\img\portfolio\4-thumbnail.jpg" />
+    <Content Include="medicalRecord\assets\img\portfolio\5-full.jpg" />
+    <Content Include="medicalRecord\assets\img\portfolio\5-thumbnail.jpg" />
+    <Content Include="medicalRecord\assets\img\portfolio\6-full.jpg" />
+    <Content Include="medicalRecord\assets\img\portfolio\6-thumbnail.jpg" />
+    <Content Include="medicalRecord\assets\img\team\1.jpg" />
+    <Content Include="medicalRecord\assets\img\team\2.jpg" />
+    <Content Include="medicalRecord\assets\img\team\3.jpg" />
+    <Content Include="medicalRecord\assets\img\WhatsApp Image 2020-06-30 at 12.52.23 PM %281%29.jpeg" />
+    <Content Include="medicalRecord\assets\img\برء.jpeg" />
+    <Content Include="medicalRecord\assets\js\agency.js" />
+    <Content Include="medicalRecord\assets\js\jquery.min.js" />
+    <Content Include="medicalRecord\aboutusStyle\bootstrap\css\bootstrap.min.css" />
+    <Content Include="medicalRecord\aboutusStyle\bootstrap\js\bootstrap.min.js" />
+    <Content Include="medicalRecord\aboutusStyle\img\about.jpg" />
+    <Content Include="medicalRecord\aboutusStyle\img\backeground.jpeg" />
+    <Content Include="medicalRecord\aboutusStyle\img\bg.jpg" />
+    <Content Include="medicalRecord\aboutusStyle\img\برء.jpeg" />
+    <Content Include="medicalRecord\aboutusStyle\js\current-day.js" />
+    <Content Include="medicalRecord\aboutusStyle\js\jquery.min.js" />
+    <Content Include="medicalRecord\dashbord\assets\bootstrap\css\bootstrap.min.css" />
+    <Content Include="medicalRecord\dashbord\assets\bootstrap\js\bootstrap.min.js" />
+    <Content Include="medicalRecord\dashbord\assets\css\Calendar-BS4-1.css" />
+    <Content Include="medicalRecord\dashbord\assets\css\Calendar-BS4.css" />
+    <Content Include="medicalRecord\dashbord\assets\fonts\fa-brands-400.svg" />
+    <Content Include="medicalRecord\dashbord\assets\fonts\fa-regular-400.svg" />
+    <Content Include="medicalRecord\dashbord\assets\fonts\fa-solid-900.svg" />
+    <Content Include="medicalRecord\dashbord\assets\fonts\font-awesome.min.css" />
+    <Content Include="medicalRecord\dashbord\assets\fonts\fontawesome-all.min.css" />
+    <Content Include="medicalRecord\dashbord\assets\fonts\fontawesome-webfont.svg" />
+    <Content Include="medicalRecord\dashbord\assets\fonts\fontawesome5-overrides.min.css" />
+    <Content Include="medicalRecord\dashbord\assets\img\858796.png" />
+    <Content Include="medicalRecord\dashbord\assets\img\avatars\avatar1.jpeg" />
+    <Content Include="medicalRecord\dashbord\assets\img\avatars\avatar2.jpeg" />
+    <Content Include="medicalRecord\dashbord\assets\img\avatars\avatar3.jpeg" />
+    <Content Include="medicalRecord\dashbord\assets\img\avatars\avatar4.jpeg" />
+    <Content Include="medicalRecord\dashbord\assets\img\avatars\avatar5.jpeg" />
+    <Content Include="medicalRecord\dashbord\assets\img\ce0000.png" />
+    <Content Include="medicalRecord\dashbord\assets\img\dogs\image2.jpeg" />
+    <Content Include="medicalRecord\dashbord\assets\img\dogs\image3.jpeg" />
+    <Content Include="medicalRecord\dashbord\assets\img\po.png" />
+    <Content Include="medicalRecord\dashbord\assets\img\برء-removebg-preview.png" />
+    <Content Include="medicalRecord\dashbord\assets\js\bs-init.js" />
+    <Content Include="medicalRecord\dashbord\assets\js\chart.min.js" />
+    <Content Include="medicalRecord\dashbord\assets\js\jquery.min.js" />
+    <Content Include="medicalRecord\dashbord\assets\js\theme.js" />
+    <Content Include="medicalRecord\correct.aspx" />
+    <Content Include="medicalRecord\dashbord\table.html" />
+    <Content Include="medicalRecord\showVL.aspx" />
+    <Content Include="medicalRecord\loginStyle\css\login.css" />
+    <Content Include="medicalRecord\loginStyle\images\Login-amico.png" />
+    <Content Include="medicalRecord\loginStyle\images\login.jpg" />
+    <Content Include="medicalRecord\loginStyle\images\logInn.jpg" />
+    <Content Include="medicalRecord\loginStyle\images\logo.svg" />
+    <Content Include="medicalRecord\medico\182 Medico -DOC\css\font-awesome.min.css" />
+    <Content Include="medicalRecord\medico\182 Medico -DOC\css\main.css" />
+    <Content Include="medicalRecord\medico\182 Medico -DOC\css\normalize.min.css" />
+    <Content Include="medicalRecord\medico\182 Medico -DOC\fonts\fontawesome-webfont.svg" />
+    <Content Include="medicalRecord\medico\182 Medico -DOC\img\logo.png" />
+    <Content Include="medicalRecord\medico\182 Medico -DOC\index.html" />
+    <Content Include="medicalRecord\medico\182 Medico -DOC\js\custom.js" />
+    <Content Include="medicalRecord\medico\182 Medico -DOC\js\jquery-1.11.0.min.js" />
+    <Content Include="medicalRecord\medico\182 Medico -DOC\js\jquery.nav.js" />
+    <Content Include="medicalRecord\medico\182 Medico -DOC\syntax-highlighter\scripts\shAutoloader.js" />
+    <Content Include="medicalRecord\medico\182 Medico -DOC\syntax-highlighter\scripts\shBrushAppleScript.js" />
+    <Content Include="medicalRecord\medico\182 Medico -DOC\syntax-highlighter\scripts\shBrushAS3.js" />
+    <Content Include="medicalRecord\medico\182 Medico -DOC\syntax-highlighter\scripts\shBrushBash.js" />
+    <Content Include="medicalRecord\medico\182 Medico -DOC\syntax-highlighter\scripts\shBrushColdFusion.js" />
+    <Content Include="medicalRecord\medico\182 Medico -DOC\syntax-highlighter\scripts\shBrushCpp.js" />
+    <Content Include="medicalRecord\medico\182 Medico -DOC\syntax-highlighter\scripts\shBrushCSharp.js" />
+    <Content Include="medicalRecord\medico\182 Medico -DOC\syntax-highlighter\scripts\shBrushCss.js" />
+    <Content Include="medicalRecord\medico\182 Medico -DOC\syntax-highlighter\scripts\shBrushDelphi.js" />
+    <Content Include="medicalRecord\medico\182 Medico -DOC\syntax-highlighter\scripts\shBrushDiff.js" />
+    <Content Include="medicalRecord\medico\182 Medico -DOC\syntax-highlighter\scripts\shBrushErlang.js" />
+    <Content Include="medicalRecord\medico\182 Medico -DOC\syntax-highlighter\scripts\shBrushGroovy.js" />
+    <Content Include="medicalRecord\medico\182 Medico -DOC\syntax-highlighter\scripts\shBrushJava.js" />
+    <Content Include="medicalRecord\medico\182 Medico -DOC\syntax-highlighter\scripts\shBrushJavaFX.js" />
+    <Content Include="medicalRecord\medico\182 Medico -DOC\syntax-highlighter\scripts\shBrushJScript.js" />
+    <Content Include="medicalRecord\medico\182 Medico -DOC\syntax-highlighter\scripts\shBrushPerl.js" />
+    <Content Include="medicalRecord\medico\182 Medico -DOC\syntax-highlighter\scripts\shBrushPhp.js" />
+    <Content Include="medicalRecord\medico\182 Medico -DOC\syntax-highlighter\scripts\shBrushPlain.js" />
+    <Content Include="medicalRecord\medico\182 Medico -DOC\syntax-highlighter\scripts\shBrushPowerShell.js" />
+    <Content Include="medicalRecord\medico\182 Medico -DOC\syntax-highlighter\scripts\shBrushPython.js" />
+    <Content Include="medicalRecord\medico\182 Medico -DOC\syntax-highlighter\scripts\shBrushRuby.js" />
+    <Content Include="medicalRecord\medico\182 Medico -DOC\syntax-highlighter\scripts\shBrushSass.js" />
+    <Content Include="medicalRecord\medico\182 Medico -DOC\syntax-highlighter\scripts\shBrushScala.js" />
+    <Content Include="medicalRecord\medico\182 Medico -DOC\syntax-highlighter\scripts\shBrushSql.js" />
+    <Content Include="medicalRecord\medico\182 Medico -DOC\syntax-highlighter\scripts\shBrushVb.js" />
+    <Content Include="medicalRecord\medico\182 Medico -DOC\syntax-highlighter\scripts\shBrushXml.js" />
+    <Content Include="medicalRecord\medico\182 Medico -DOC\syntax-highlighter\scripts\shCore.js" />
+    <Content Include="medicalRecord\medico\182 Medico -DOC\syntax-highlighter\scripts\shLegacy.js" />
+    <Content Include="medicalRecord\medico\182 Medico -DOC\syntax-highlighter\styles\shCore.css" />
+    <Content Include="medicalRecord\medico\182 Medico -DOC\syntax-highlighter\styles\shCoreDefault.css" />
+    <Content Include="medicalRecord\medico\182 Medico -DOC\syntax-highlighter\styles\shCoreDjango.css" />
+    <Content Include="medicalRecord\medico\182 Medico -DOC\syntax-highlighter\styles\shCoreEclipse.css" />
+    <Content Include="medicalRecord\medico\182 Medico -DOC\syntax-highlighter\styles\shCoreEmacs.css" />
+    <Content Include="medicalRecord\medico\182 Medico -DOC\syntax-highlighter\styles\shCoreFadeToGrey.css" />
+    <Content Include="medicalRecord\medico\182 Medico -DOC\syntax-highlighter\styles\shCoreMDUltra.css" />
+    <Content Include="medicalRecord\medico\182 Medico -DOC\syntax-highlighter\styles\shCoreMidnight.css" />
+    <Content Include="medicalRecord\medico\182 Medico -DOC\syntax-highlighter\styles\shCoreRDark.css" />
+    <Content Include="medicalRecord\medico\182 Medico -DOC\syntax-highlighter\styles\shThemeDefault.css" />
+    <Content Include="medicalRecord\medico\182 Medico -DOC\syntax-highlighter\styles\shThemeDjango.css" />
+    <Content Include="medicalRecord\medico\182 Medico -DOC\syntax-highlighter\styles\shThemeEclipse.css" />
+    <Content Include="medicalRecord\medico\182 Medico -DOC\syntax-highlighter\styles\shThemeEmacs.css" />
+    <Content Include="medicalRecord\medico\182 Medico -DOC\syntax-highlighter\styles\shThemeFadeToGrey.css" />
+    <Content Include="medicalRecord\medico\182 Medico -DOC\syntax-highlighter\styles\shThemeMDUltra.css" />
+    <Content Include="medicalRecord\medico\182 Medico -DOC\syntax-highlighter\styles\shThemeMidnight.css" />
+    <Content Include="medicalRecord\medico\182 Medico -DOC\syntax-highlighter\styles\shThemeRDark.css" />
+    <Content Include="medicalRecord\medico\contact_process.php" />
+    <Content Include="medicalRecord\medico\css\animate.css" />
+    <Content Include="medicalRecord\medico\css\aos.css" />
+    <Content Include="medicalRecord\medico\css\bootstrap.min.css" />
+    <Content Include="medicalRecord\medico\css\flaticon.css" />
+    <Content Include="medicalRecord\medico\css\font-awesome.min.css" />
+    <Content Include="medicalRecord\medico\css\magnific-popup.css" />
+    <Content Include="medicalRecord\medico\css\nice-select.css" />
+    <Content Include="medicalRecord\medico\css\owl.carousel.min.css" />
+    <Content Include="medicalRecord\medico\css\slick.css" />
+    <Content Include="medicalRecord\medico\css\style.css" />
+    <Content Include="medicalRecord\medico\css\swiper.min.css" />
+    <Content Include="medicalRecord\medico\css\themify-icons.css" />
+    <Content Include="medicalRecord\medico\fonts\fontawesome-webfont.svg" />
+    <Content Include="medicalRecord\medico\fonts\themify.svg" />
+    <Content Include="medicalRecord\medico\img\about_bg.png" />
+    <Content Include="medicalRecord\medico\img\author\author_1.png" />
+    <Content Include="medicalRecord\medico\img\author\author_2.png" />
+    <Content Include="medicalRecord\medico\img\author\author_3.png" />
+    <Content Include="medicalRecord\medico\img\banner_img.png" />
+    <Content Include="medicalRecord\medico\img\blog\author.png" />
+    <Content Include="medicalRecord\medico\img\blog\blog_1.png" />
+    <Content Include="medicalRecord\medico\img\blog\blog_2.png" />
+    <Content Include="medicalRecord\medico\img\blog\blog_3.png" />
+    <Content Include="medicalRecord\medico\img\blog\blog_4.png" />
+    <Content Include="medicalRecord\medico\img\blog\learn_about_bg.png" />
+    <Content Include="medicalRecord\medico\img\blog\single_blog_1.png" />
+    <Content Include="medicalRecord\medico\img\blog\single_blog_2.png" />
+    <Content Include="medicalRecord\medico\img\blog\single_blog_3.png" />
+    <Content Include="medicalRecord\medico\img\blog\single_blog_4.png" />
+    <Content Include="medicalRecord\medico\img\blog\single_blog_5.png" />
+    <Content Include="medicalRecord\medico\img\blog\slide_thumb_1.png" />
+    <Content Include="medicalRecord\medico\img\comment\comment_1.png" />
+    <Content Include="medicalRecord\medico\img\comment\comment_2.png" />
+    <Content Include="medicalRecord\medico\img\comment\comment_3.png" />
+    <Content Include="medicalRecord\medico\img\coronavirus-blood-test-concept_23-2148538976-removebg-preview.png" />
+    <Content Include="medicalRecord\medico\img\cource\cource_1.png" />
+    <Content Include="medicalRecord\medico\img\cource\cource_2.png" />
+    <Content Include="medicalRecord\medico\img\cource\cource_3.png" />
+    <Content Include="medicalRecord\medico\img\covidefamily.jpg" />
+    <Content Include="medicalRecord\medico\img\covy.png" />
+    <Content Include="medicalRecord\medico\img\df.png" />
+    <Content Include="medicalRecord\medico\img\dm.png" />
+    <Content Include="medicalRecord\medico\img\doctor-icon-avatar-white_136162-58-removebg-preview %281%29.png" />
+    <Content Include="medicalRecord\medico\img\doctor\doctor_1.png" />
+    <Content Include="medicalRecord\medico\img\doctor\doctor_2.png" />
+    <Content Include="medicalRecord\medico\img\doctor\doctor_3.png" />
+    <Content Include="medicalRecord\medico\img\doctor\doctor_4.png" />
+    <Content Include="medicalRecord\medico\img\dr4.png" />
+    <Content Include="medicalRecord\medico\img\dr6.jpg" />
+    <Content Include="medicalRecord\medico\img\elements\a.jpg" />
+    <Content Include="medicalRecord\medico\img\elements\a2.jpg" />
+    <Content Include="medicalRecord\medico\img\elements\d.jpg" />
+    <Content Include="medicalRecord\medico\img\elements\disabled-check.png" />
+    <Content Include="medicalRecord\medico\img\elements\disabled-radio.png" />
+    <Content Include="medicalRecord\medico\img\elements\f1.jpg" />
+    <Content Include="medicalRecord\medico\img\elements\f2.jpg" />
+    <Content Include="medicalRecord\medico\img\elements\f3.jpg" />
+    <Content Include="medicalRecord\medico\img\elements\f4.jpg" />
+    <Content Include="medicalRecord\medico\img\elements\f5.jpg" />
+    <Content Include="medicalRecord\medico\img\elements\f6.jpg" />
+    <Content Include="medicalRecord\medico\img\elements\f7.jpg" />
+    <Content Include="medicalRecord\medico\img\elements\f8.jpg" />
+    <Content Include="medicalRecord\medico\img\elements\g1.jpg" />
+    <Content Include="medicalRecord\medico\img\elements\g2.jpg" />
+    <Content Include="medicalRecord\medico\img\elements\g3.jpg" />
+    <Content Include="medicalRecord\medico\img\elements\g4.jpg" />
+    <Content Include="medicalRecord\medico\img\elements\g5.jpg" />
+    <Content Include="medicalRecord\medico\img\elements\g6.jpg" />
+    <Content Include="medicalRecord\medico\img\elements\g7.jpg" />
+    <Content Include="medicalRecord\medico\img\elements\g8.jpg" />
+    <Content Include="medicalRecord\medico\img\elements\primary-check.png" />
+    <Content Include="medicalRecord\medico\img\elements\primary-radio.png" />
+    <Content Include="medicalRecord\medico\img\elements\success-check.png" />
+    <Content Include="medicalRecord\medico\img\elements\success-radio.png" />
+    <Content Include="medicalRecord\medico\img\family.png" />
+    <Content Include="medicalRecord\medico\img\favicon.png" />
+    <Content Include="medicalRecord\medico\img\icon\banner_1.svg" />
+    <Content Include="medicalRecord\medico\img\icon\banner_2.svg" />
+    <Content Include="medicalRecord\medico\img\icon\banner_3.svg" />
+    <Content Include="medicalRecord\medico\img\icon\color_star.svg" />
+    <Content Include="medicalRecord\medico\img\icon\feature_1.svg" />
+    <Content Include="medicalRecord\medico\img\icon\feature_2.svg" />
+    <Content Include="medicalRecord\medico\img\icon\left.svg" />
+    <Content Include="medicalRecord\medico\img\icon\play.svg" />
+    <Content Include="medicalRecord\medico\img\icon\quate.svg" />
+    <Content Include="medicalRecord\medico\img\icon\right.svg" />
+    <Content Include="medicalRecord\medico\img\icon\star.svg" />
+    <Content Include="medicalRecord\medico\img\learning_img_bg.png" />
+    <Content Include="medicalRecord\medico\img\medicen.png" />
+    <Content Include="medicalRecord\medico\img\mi.png" />
+    <Content Include="medicalRecord\medico\img\post\next.png" />
+    <Content Include="medicalRecord\medico\img\post\post_1.png" />
+    <Content Include="medicalRecord\medico\img\post\post_10.png" />
+    <Content Include="medicalRecord\medico\img\post\post_2.png" />
+    <Content Include="medicalRecord\medico\img\post\post_3.png" />
+    <Content Include="medicalRecord\medico\img\post\post_4.png" />
+    <Content Include="medicalRecord\medico\img\post\post_5.png" />
+    <Content Include="medicalRecord\medico\img\post\post_6.png" />
+    <Content Include="medicalRecord\medico\img\post\post_7.png" />
+    <Content Include="medicalRecord\medico\img\post\post_8.png" />
+    <Content Include="medicalRecord\medico\img\post\post_9.png" />
+    <Content Include="medicalRecord\medico\img\post\preview.png" />
+    <Content Include="medicalRecord\medico\img\quote.png" />
+    <Content Include="medicalRecord\medico\img\reservation.png" />
+    <Content Include="medicalRecord\medico\img\review_bg.png" />
+    <Content Include="medicalRecord\medico\img\service.png" />
+    <Content Include="medicalRecord\medico\img\sick.png" />
+    <Content Include="medicalRecord\medico\js\bootstrap.min.js" />
+    <Content Include="medicalRecord\medico\js\contact.js" />
+    <Content Include="medicalRecord\medico\js\custom.js" />
+    <Content Include="medicalRecord\medico\js\gmaps.min.js" />
+    <Content Include="medicalRecord\medico\js\jquery-1.12.1.min.js" />
+    <Content Include="medicalRecord\medico\js\jquery.ajaxchimp.min.js" />
+    <Content Include="medicalRecord\medico\js\jquery.easing.min.js" />
+    <Content Include="medicalRecord\medico\js\jquery.form.js" />
+    <Content Include="medicalRecord\medico\js\jquery.nice-select.min.js" />
+    <Content Include="medicalRecord\medico\js\jquery.validate.min.js" />
+    <Content Include="medicalRecord\medico\js\mail-script.js" />
+    <Content Include="medicalRecord\medico\js\owl.carousel.min.js" />
+    <Content Include="medicalRecord\medico\js\popper.min.js" />
+    <Content Include="medicalRecord\emrgency.aspx" />
+    <Content Include="medicalRecord\nonHealth.aspx" />
+    <Content Include="medicalRecord\signupStyle\images\Add User-pana-crop.png" />
+    <Content Include="medicalRecord\signupStyle\images\Add User-pana.png" />
+    <Content Include="medicalRecord\signupStyle\images\Company-pana.png" />
+    <Content Include="medicalRecord\signupStyle\images\crop.PNG" />
+    <Content Include="medicalRecord\signupStyle\images\Doctors-amico.png" />
+    <Content Include="medicalRecord\signupStyle\images\Doctors-pana.png" />
+    <Content Include="medicalRecord\signupStyle\images\Doctors-rafiki %281%29.png" />
+    <Content Include="medicalRecord\signupStyle\images\Doctors-rafiki.png" />
+    <Content Include="medicalRecord\signupStyle\images\Mobile login-amico %281%29.png" />
+    <Content Include="medicalRecord\team.aspx" />
+    <Content Include="medicalRecord\teamStyle\css\style.css" />
+    <Content Include="medicalRecord\teamStyle\img\cat.png" />
+    <Content Include="medicalRecord\teamStyle\img\email.png" />
+    <Content Include="medicalRecord\teamStyle\img\email1.png" />
+    <Content Include="medicalRecord\teamStyle\img\kk.jpg" />
+    <Content Include="medicalRecord\teamStyle\img\lap2.jpg" />
+    <Content Include="medicalRecord\teamStyle\img\logoo.png" />
+    <Content Include="medicalRecord\teamStyle\img\mash.jpg" />
+    <Content Include="medicalRecord\teamStyle\img\mh.png" />
+    <Content Include="medicalRecord\teamStyle\img\moh.jpg" />
+    <Content Include="medicalRecord\teamStyle\img\new.jpg" />
+    <Content Include="medicalRecord\teamStyle\img\reham.jpg" />
+    <Content Include="medicalRecord\teamStyle\img\shahad.jpg" />
+    <Content Include="medicalRecord\teamStyle\img\shahy.jpg" />
+    <Content Include="medicalRecord\teamStyle\img\shd.jpg" />
+    <Content Include="medicalRecord\teamStyle\img\shi.jpg" />
+    <Content Include="medicalRecord\teamStyle\img\shl.jpg" />
+    <Content Include="medicalRecord\teamStyle\img\shu.jpg" />
+    <Content Include="medicalRecord\teamStyle\js\main.js" />
+    <Content Include="medicalRecord\teamStyle\vendor\aos\aos.css" />
+    <Content Include="medicalRecord\teamStyle\vendor\aos\aos.js" />
+    <Content Include="medicalRecord\teamStyle\vendor\bootstrap\css\bootstrap-grid.css" />
+    <Content Include="medicalRecord\teamStyle\vendor\bootstrap\css\bootstrap-grid.min.css" />
+    <Content Include="medicalRecord\teamStyle\vendor\bootstrap\css\bootstrap-reboot.css" />
+    <Content Include="medicalRecord\teamStyle\vendor\bootstrap\css\bootstrap-reboot.min.css" />
+    <Content Include="medicalRecord\teamStyle\vendor\bootstrap\css\bootstrap.css" />
+    <Content Include="medicalRecord\teamStyle\vendor\bootstrap\css\bootstrap.min.css" />
+    <Content Include="medicalRecord\teamStyle\vendor\bootstrap\js\bootstrap.bundle.js" />
+    <Content Include="medicalRecord\teamStyle\vendor\bootstrap\js\bootstrap.bundle.min.js" />
+    <Content Include="medicalRecord\teamStyle\vendor\bootstrap\js\bootstrap.js" />
+    <Content Include="medicalRecord\teamStyle\vendor\bootstrap\js\bootstrap.min.js" />
+    <Content Include="medicalRecord\teamStyle\vendor\boxicons\css\animations.css" />
+    <Content Include="medicalRecord\teamStyle\vendor\boxicons\css\boxicons.css" />
+    <Content Include="medicalRecord\teamStyle\vendor\boxicons\css\boxicons.min.css" />
+    <Content Include="medicalRecord\teamStyle\vendor\boxicons\css\transformations.css" />
+    <Content Include="medicalRecord\teamStyle\vendor\boxicons\fonts\boxicons.svg" />
+    <Content Include="medicalRecord\teamStyle\vendor\counterup\counterup.min.js" />
+    <Content Include="medicalRecord\teamStyle\vendor\icofont\icofont.min.css" />
+    <Content Include="medicalRecord\teamStyle\vendor\isotope-layout\isotope.pkgd.js" />
+    <Content Include="medicalRecord\teamStyle\vendor\isotope-layout\isotope.pkgd.min.js" />
+    <Content Include="medicalRecord\teamStyle\vendor\jquery.easing\jquery.easing.min.js" />
+    <Content Include="medicalRecord\teamStyle\vendor\jquery\jquery.min.js" />
+    <Content Include="medicalRecord\teamStyle\vendor\owl.carousel\assets\ajax-loader.gif" />
+    <Content Include="medicalRecord\teamStyle\vendor\owl.carousel\assets\owl.carousel.css" />
+    <Content Include="medicalRecord\teamStyle\vendor\owl.carousel\assets\owl.carousel.min.css" />
+    <Content Include="medicalRecord\teamStyle\vendor\owl.carousel\assets\owl.theme.default.css" />
+    <Content Include="medicalRecord\teamStyle\vendor\owl.carousel\assets\owl.theme.default.min.css" />
+    <Content Include="medicalRecord\teamStyle\vendor\owl.carousel\assets\owl.theme.green.css" />
+    <Content Include="medicalRecord\teamStyle\vendor\owl.carousel\assets\owl.theme.green.min.css" />
+    <Content Include="medicalRecord\teamStyle\vendor\owl.carousel\assets\owl.video.play.png" />
+    <Content Include="medicalRecord\teamStyle\vendor\owl.carousel\owl.carousel.js" />
+    <Content Include="medicalRecord\teamStyle\vendor\owl.carousel\owl.carousel.min.js" />
+    <Content Include="medicalRecord\teamStyle\vendor\php-email-form\changelog.txt" />
+    <Content Include="medicalRecord\teamStyle\vendor\php-email-form\validate.js" />
+    <Content Include="medicalRecord\teamStyle\vendor\remixicon\remixicon.css" />
+    <Content Include="medicalRecord\teamStyle\vendor\remixicon\remixicon.svg" />
+    <Content Include="medicalRecord\teamStyle\vendor\remixicon\remixicon.symbol.svg" />
+    <Content Include="medicalRecord\teamStyle\vendor\venobox\venobox.css" />
+    <Content Include="medicalRecord\teamStyle\vendor\venobox\venobox.js" />
+    <Content Include="medicalRecord\teamStyle\vendor\venobox\venobox.min.css" />
+    <Content Include="medicalRecord\teamStyle\vendor\venobox\venobox.min.js" />
+    <Content Include="medicalRecord\teamStyle\vendor\waypoints\jquery.waypoints.min.js" />
+    <Content Include="medicalRecord\volunteerStyle\NonHealthVolunteers\WebForm1.aspx" />
+    <Content Include="medicalRecord\signupStyle\css\main.css" />
+    <Content Include="medicalRecord\signupStyle\css\util.css" />
+    <Content Include="medicalRecord\signupStyle\fonts\font-awesome-4.7.0\css\font-awesome.css" />
+    <Content Include="medicalRecord\signupStyle\fonts\font-awesome-4.7.0\css\font-awesome.min.css" />
+    <Content Include="medicalRecord\signupStyle\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.svg" />
+    <Content Include="medicalRecord\signupStyle\fonts\font-awesome-4.7.0\HELP-US-OUT.txt" />
+    <Content Include="medicalRecord\signupStyle\fonts\iconic\css\material-design-iconic-font.css" />
+    <Content Include="medicalRecord\signupStyle\fonts\iconic\css\material-design-iconic-font.min.css" />
+    <Content Include="medicalRecord\signupStyle\fonts\iconic\fonts\Material-Design-Iconic-Font.svg" />
+    <Content Include="medicalRecord\signupStyle\fonts\Linearicons-Free-v1.0.0\icon-font.min.css" />
+    <Content Include="medicalRecord\signupStyle\fonts\Linearicons-Free-v1.0.0\WebFont\Linearicons-Free.svg" />
+    <Content Include="medicalRecord\volunteerStyle\HealthVolunteers\bootstrap-theme.min.css" />
+    <Content Include="medicalRecord\volunteerStyle\HealthVolunteers\script.js" />
+    <Content Include="medicalRecord\volunteerStyle\HealthVolunteers\style.css" />
+    <Content Include="medicalRecord\signupStyle\images\icons\favicon.ico" />
+    <Content Include="medicalRecord\signupStyle\images\icons\map-marker.png" />
+    <Content Include="medicalRecord\assets\img\locke.png" />
+    <Content Include="medicalRecord\assets\img\person-icon-red-14.jpg" />
+    <Content Include="medicalRecord\signupStyle\images\sign.jpg" />
+    <Content Include="medicalRecord\signupStyle\js\main.js" />
+    <Content Include="medicalRecord\signupStyle\js\map-custom.js" />
+    <Content Include="medicalRecord\loginAdmin2.aspx" />
+    <Content Include="medicalRecord\medicalMaster.Master" />
+    <Content Include="medicalRecord\assets\fonts\fontawesome-webfont.eot" />
+    <Content Include="medicalRecord\assets\fonts\fontawesome-webfont.ttf" />
+    <Content Include="medicalRecord\assets\fonts\fontawesome-webfont.woff" />
+    <Content Include="medicalRecord\assets\fonts\fontawesome-webfont.woff2" />
+    <Content Include="medicalRecord\assets\fonts\FontAwesome.otf" />
+    <Content Include="medicalRecord\signupStyle\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.eot" />
+    <Content Include="medicalRecord\signupStyle\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.ttf" />
+    <Content Include="medicalRecord\signupStyle\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.woff" />
+    <Content Include="medicalRecord\signupStyle\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.woff2" />
+    <Content Include="medicalRecord\signupStyle\fonts\font-awesome-4.7.0\fonts\FontAwesome.otf" />
+    <Content Include="medicalRecord\signupStyle\fonts\font-awesome-4.7.0\less\animated.less" />
+    <Content Include="medicalRecord\signupStyle\fonts\font-awesome-4.7.0\less\bordered-pulled.less" />
+    <Content Include="medicalRecord\signupStyle\fonts\font-awesome-4.7.0\less\core.less" />
+    <Content Include="medicalRecord\signupStyle\fonts\font-awesome-4.7.0\less\fixed-width.less" />
+    <Content Include="medicalRecord\signupStyle\fonts\font-awesome-4.7.0\less\font-awesome.less" />
+    <Content Include="medicalRecord\signupStyle\fonts\font-awesome-4.7.0\less\icons.less" />
+    <Content Include="medicalRecord\signupStyle\fonts\font-awesome-4.7.0\less\larger.less" />
+    <Content Include="medicalRecord\signupStyle\fonts\font-awesome-4.7.0\less\list.less" />
+    <Content Include="medicalRecord\signupStyle\fonts\font-awesome-4.7.0\less\mixins.less" />
+    <Content Include="medicalRecord\signupStyle\fonts\font-awesome-4.7.0\less\path.less" />
+    <Content Include="medicalRecord\signupStyle\fonts\font-awesome-4.7.0\less\rotated-flipped.less" />
+    <Content Include="medicalRecord\signupStyle\fonts\font-awesome-4.7.0\less\screen-reader.less" />
+    <Content Include="medicalRecord\signupStyle\fonts\font-awesome-4.7.0\less\stacked.less" />
+    <Content Include="medicalRecord\signupStyle\fonts\font-awesome-4.7.0\less\variables.less" />
+    <Content Include="medicalRecord\signupStyle\fonts\font-awesome-4.7.0\scss\font-awesome.scss" />
+    <Content Include="medicalRecord\signupStyle\fonts\font-awesome-4.7.0\scss\_animated.scss" />
+    <Content Include="medicalRecord\signupStyle\fonts\font-awesome-4.7.0\scss\_bordered-pulled.scss" />
+    <Content Include="medicalRecord\signupStyle\fonts\font-awesome-4.7.0\scss\_core.scss" />
+    <Content Include="medicalRecord\signupStyle\fonts\font-awesome-4.7.0\scss\_fixed-width.scss" />
+    <Content Include="medicalRecord\signupStyle\fonts\font-awesome-4.7.0\scss\_icons.scss" />
+    <Content Include="medicalRecord\signupStyle\fonts\font-awesome-4.7.0\scss\_larger.scss" />
+    <Content Include="medicalRecord\signupStyle\fonts\font-awesome-4.7.0\scss\_list.scss" />
+    <Content Include="medicalRecord\signupStyle\fonts\font-awesome-4.7.0\scss\_mixins.scss" />
+    <Content Include="medicalRecord\signupStyle\fonts\font-awesome-4.7.0\scss\_path.scss" />
+    <Content Include="medicalRecord\signupStyle\fonts\font-awesome-4.7.0\scss\_rotated-flipped.scss" />
+    <Content Include="medicalRecord\signupStyle\fonts\font-awesome-4.7.0\scss\_screen-reader.scss" />
+    <Content Include="medicalRecord\signupStyle\fonts\font-awesome-4.7.0\scss\_stacked.scss" />
+    <Content Include="medicalRecord\signupStyle\fonts\font-awesome-4.7.0\scss\_variables.scss" />
+    <Content Include="medicalRecord\signupStyle\fonts\iconic\fonts\Material-Design-Iconic-Font.eot" />
+    <Content Include="medicalRecord\signupStyle\fonts\iconic\fonts\Material-Design-Iconic-Font.ttf" />
+    <Content Include="medicalRecord\signupStyle\fonts\iconic\fonts\Material-Design-Iconic-Font.woff" />
+    <Content Include="medicalRecord\signupStyle\fonts\iconic\fonts\Material-Design-Iconic-Font.woff2" />
+    <Content Include="medicalRecord\signupStyle\fonts\Linearicons-Free-v1.0.0\WebFont\Linearicons-Free.eot" />
+    <Content Include="medicalRecord\signupStyle\fonts\Linearicons-Free-v1.0.0\WebFont\Linearicons-Free.ttf" />
+    <Content Include="medicalRecord\signupStyle\fonts\Linearicons-Free-v1.0.0\WebFont\Linearicons-Free.woff" />
+    <Content Include="medicalRecord\signupStyle\fonts\Linearicons-Free-v1.0.0\WebFont\Linearicons-Free.woff2" />
+    <Content Include="medicalRecord\signupStyle\fonts\poppins\Poppins-Black.ttf" />
+    <Content Include="medicalRecord\signupStyle\fonts\poppins\Poppins-BlackItalic.ttf" />
+    <Content Include="medicalRecord\signupStyle\fonts\poppins\Poppins-Bold.ttf" />
+    <Content Include="medicalRecord\signupStyle\fonts\poppins\Poppins-BoldItalic.ttf" />
+    <Content Include="medicalRecord\signupStyle\fonts\poppins\Poppins-ExtraBold.ttf" />
+    <Content Include="medicalRecord\signupStyle\fonts\poppins\Poppins-ExtraBoldItalic.ttf" />
+    <Content Include="medicalRecord\signupStyle\fonts\poppins\Poppins-ExtraLight.ttf" />
+    <Content Include="medicalRecord\signupStyle\fonts\poppins\Poppins-ExtraLightItalic.ttf" />
+    <Content Include="medicalRecord\signupStyle\fonts\poppins\Poppins-Italic.ttf" />
+    <Content Include="medicalRecord\signupStyle\fonts\poppins\Poppins-Light.ttf" />
+    <Content Include="medicalRecord\signupStyle\fonts\poppins\Poppins-LightItalic.ttf" />
+    <Content Include="medicalRecord\signupStyle\fonts\poppins\Poppins-Medium.ttf" />
+    <Content Include="medicalRecord\signupStyle\fonts\poppins\Poppins-MediumItalic.ttf" />
+    <Content Include="medicalRecord\signupStyle\fonts\poppins\Poppins-Regular.ttf" />
+    <Content Include="medicalRecord\signupStyle\fonts\poppins\Poppins-SemiBold.ttf" />
+    <Content Include="medicalRecord\signupStyle\fonts\poppins\Poppins-SemiBoldItalic.ttf" />
+    <Content Include="medicalRecord\signupStyle\fonts\poppins\Poppins-Thin.ttf" />
+    <Content Include="medicalRecord\signupStyle\fonts\poppins\Poppins-ThinItalic.ttf" />
+    <Content Include="medicalRecord\volunteerStyle\NonHealthVolunteers\bootstrap-theme.min.css" />
+    <Content Include="medicalRecord\volunteerStyle\NonHealthVolunteers\script.js" />
+    <Content Include="medicalRecord\volunteerStyle\NonHealthVolunteers\style.css" />
+    <Content Include="medicalRecord\signup.aspx" />
+    <Content Include="medicalRecord\signupStyle\vendor\bootstrap\css\bootstrap-grid.css.map" />
+    <Content Include="medicalRecord\signupStyle\vendor\bootstrap\css\bootstrap-grid.min.css.map" />
+    <Content Include="medicalRecord\signupStyle\vendor\bootstrap\css\bootstrap-reboot.css.map" />
+    <Content Include="medicalRecord\signupStyle\vendor\bootstrap\css\bootstrap-reboot.min.css.map" />
+    <Content Include="medicalRecord\signupStyle\vendor\bootstrap\css\bootstrap.css.map" />
+    <Content Include="medicalRecord\signupStyle\vendor\bootstrap\css\bootstrap.min.css.map" />
+    <Content Include="medicalRecord\adminStyle\fonts\fontawesome-webfont.eot" />
+    <Content Include="medicalRecord\adminStyle\fonts\fontawesome-webfont.ttf" />
+    <Content Include="medicalRecord\adminStyle\fonts\fontawesome-webfont.woff" />
+    <Content Include="medicalRecord\adminStyle\fonts\fontawesome-webfont.woff2" />
+    <Content Include="medicalRecord\adminStyle\fonts\FontAwesome.otf" />
+    <Content Include="medicalRecord\adminStyle\fonts\ionicons.eot" />
+    <Content Include="medicalRecord\adminStyle\fonts\ionicons.ttf" />
+    <Content Include="medicalRecord\adminStyle\fonts\ionicons.woff" />
+    <Content Include="medicalRecord\loginStyle\css\login.css.map" />
+    <Content Include="medicalRecord\loginStyle\scss\login.scss" />
+    <Content Include="medicalRecord\teamStyle\vendor\bootstrap\css\bootstrap-grid.css.map" />
+    <Content Include="medicalRecord\teamStyle\vendor\bootstrap\css\bootstrap-grid.min.css.map" />
+    <Content Include="medicalRecord\teamStyle\vendor\bootstrap\css\bootstrap-reboot.css.map" />
+    <Content Include="medicalRecord\teamStyle\vendor\bootstrap\css\bootstrap-reboot.min.css.map" />
+    <Content Include="medicalRecord\teamStyle\vendor\bootstrap\css\bootstrap.css.map" />
+    <Content Include="medicalRecord\teamStyle\vendor\bootstrap\css\bootstrap.min.css.map" />
+    <Content Include="medicalRecord\teamStyle\vendor\bootstrap\js\bootstrap.bundle.js.map" />
+    <Content Include="medicalRecord\teamStyle\vendor\bootstrap\js\bootstrap.bundle.min.js.map" />
+    <Content Include="medicalRecord\teamStyle\vendor\bootstrap\js\bootstrap.js.map" />
+    <Content Include="medicalRecord\teamStyle\vendor\bootstrap\js\bootstrap.min.js.map" />
+    <Content Include="medicalRecord\teamStyle\vendor\boxicons\fonts\boxicons.eot" />
+    <Content Include="medicalRecord\teamStyle\vendor\boxicons\fonts\boxicons.ttf" />
+    <Content Include="medicalRecord\teamStyle\vendor\boxicons\fonts\boxicons.woff" />
+    <Content Include="medicalRecord\teamStyle\vendor\boxicons\fonts\boxicons.woff2" />
+    <Content Include="medicalRecord\teamStyle\vendor\icofont\fonts\icofont.woff" />
+    <Content Include="medicalRecord\teamStyle\vendor\icofont\fonts\icofont.woff2" />
+    <Content Include="medicalRecord\teamStyle\vendor\jquery\jquery.min.map" />
+    <Content Include="medicalRecord\teamStyle\vendor\owl.carousel\LICENSE" />
+    <Content Include="medicalRecord\teamStyle\vendor\owl.carousel\README.md" />
+    <Content Include="medicalRecord\teamStyle\vendor\remixicon\remixicon.eot" />
+    <Content Include="medicalRecord\teamStyle\vendor\remixicon\remixicon.less" />
+    <Content Include="medicalRecord\teamStyle\vendor\remixicon\remixicon.ttf" />
+    <Content Include="medicalRecord\teamStyle\vendor\remixicon\remixicon.woff" />
+    <Content Include="medicalRecord\teamStyle\vendor\remixicon\remixicon.woff2" />
+    <Content Include="medicalRecord\medico\182 Medico -DOC\fonts\fontawesome-webfont.eot" />
+    <Content Include="medicalRecord\medico\182 Medico -DOC\fonts\fontawesome-webfont.ttf" />
+    <Content Include="medicalRecord\medico\182 Medico -DOC\fonts\fontawesome-webfont.woff" />
+    <Content Include="medicalRecord\medico\182 Medico -DOC\fonts\FontAwesome.otf" />
+    <Content Include="medicalRecord\medico\182 Medico -DOC\img\Thumbs.db" />
+    <Content Include="medicalRecord\medico\css\style.map" />
+    <Content Include="medicalRecord\medico\fonts\Flaticon.eot" />
+    <Content Include="medicalRecord\medico\fonts\Flaticon.ttf" />
+    <Content Include="medicalRecord\medico\fonts\Flaticon.woff" />
+    <Content Include="medicalRecord\medico\fonts\Flaticon.woff2" />
+    <Content Include="medicalRecord\medico\fonts\fontawesome-webfont.eot" />
+    <Content Include="medicalRecord\medico\fonts\fontawesome-webfont.ttf" />
+    <Content Include="medicalRecord\medico\fonts\fontawesome-webfont.woff" />
+    <Content Include="medicalRecord\medico\fonts\fontawesome-webfont.woff2" />
+    <Content Include="medicalRecord\medico\fonts\FontAwesome.otf" />
+    <Content Include="medicalRecord\medico\fonts\themify.eot" />
+    <Content Include="medicalRecord\medico\fonts\themify.ttf" />
+    <Content Include="medicalRecord\medico\fonts\themify.woff" />
+    <Content Include="medicalRecord\medico\sass\style.scss" />
+    <Content Include="medicalRecord\medico\sass\_about_us.scss" />
+    <Content Include="medicalRecord\medico\sass\_banner.scss" />
+    <Content Include="medicalRecord\medico\sass\_blog.scss" />
+    <Content Include="medicalRecord\medico\sass\_blog_part.scss" />
+    <Content Include="medicalRecord\medico\sass\_breadcrumb.scss" />
+    <Content Include="medicalRecord\medico\sass\_button.scss" />
+    <Content Include="medicalRecord\medico\sass\_common.scss" />
+    <Content Include="medicalRecord\medico\sass\_contact.scss" />
+    <Content Include="medicalRecord\medico\sass\_doctor_list.scss" />
+    <Content Include="medicalRecord\medico\sass\_elements.scss" />
+    <Content Include="medicalRecord\medico\sass\_extends.scss" />
+    <Content Include="medicalRecord\medico\sass\_feature_part.scss" />
+    <Content Include="medicalRecord\medico\sass\_footer.scss" />
+    <Content Include="medicalRecord\medico\sass\_intro_video_bg.scss" />
+    <Content Include="medicalRecord\medico\sass\_menu.scss" />
+    <Content Include="medicalRecord\medico\sass\_mixins.scss" />
+    <Content Include="medicalRecord\medico\sass\_our_depertment.scss" />
+    <Content Include="medicalRecord\medico\sass\_regervation_part.scss" />
+    <Content Include="medicalRecord\medico\sass\_review.scss" />
+    <Content Include="medicalRecord\medico\sass\_single_blog.scss" />
+    <Content Include="medicalRecord\medico\sass\_variables.scss" />
+    <Content Include="medicalRecord\dashbord\assets\fonts\fa-brands-400.eot" />
+    <Content Include="medicalRecord\dashbord\assets\fonts\fa-brands-400.ttf" />
+    <Content Include="medicalRecord\dashbord\assets\fonts\fa-brands-400.woff" />
+    <Content Include="medicalRecord\dashbord\assets\fonts\fa-brands-400.woff2" />
+    <Content Include="medicalRecord\dashbord\assets\fonts\fa-regular-400.eot" />
+    <Content Include="medicalRecord\dashbord\assets\fonts\fa-regular-400.ttf" />
+    <Content Include="medicalRecord\dashbord\assets\fonts\fa-regular-400.woff" />
+    <Content Include="medicalRecord\dashbord\assets\fonts\fa-regular-400.woff2" />
+    <Content Include="medicalRecord\dashbord\assets\fonts\fa-solid-900.eot" />
+    <Content Include="medicalRecord\dashbord\assets\fonts\fa-solid-900.ttf" />
+    <Content Include="medicalRecord\dashbord\assets\fonts\fa-solid-900.woff" />
+    <Content Include="medicalRecord\dashbord\assets\fonts\fa-solid-900.woff2" />
+    <Content Include="medicalRecord\dashbord\assets\fonts\fontawesome-webfont.eot" />
+    <Content Include="medicalRecord\dashbord\assets\fonts\fontawesome-webfont.ttf" />
+    <Content Include="medicalRecord\dashbord\assets\fonts\fontawesome-webfont.woff" />
+    <Content Include="medicalRecord\dashbord\assets\fonts\fontawesome-webfont.woff2" />
+    <Content Include="medicalRecord\dashbord\assets\fonts\FontAwesome.otf" />
+    <None Include="Properties\PublishProfiles\Default Settings.pubxml" />
+    <None Include="Scripts\jquery-3.3.1.intellisense.js" />
+    <Content Include="medicalRecord\homePage.aspx" />
+    <Content Include="medicalRecord\signupStyle\vendor\animate\animate.css" />
+    <Content Include="medicalRecord\signupStyle\vendor\animsition\css\animsition.css" />
+    <Content Include="medicalRecord\signupStyle\vendor\animsition\css\animsition.min.css" />
+    <Content Include="medicalRecord\signupStyle\vendor\animsition\js\animsition.js" />
+    <Content Include="medicalRecord\signupStyle\vendor\animsition\js\animsition.min.js" />
+    <Content Include="medicalRecord\signupStyle\vendor\bootstrap\css\bootstrap-grid.css" />
+    <Content Include="medicalRecord\signupStyle\vendor\bootstrap\css\bootstrap-grid.min.css" />
+    <Content Include="medicalRecord\signupStyle\vendor\bootstrap\css\bootstrap-reboot.css" />
+    <Content Include="medicalRecord\signupStyle\vendor\bootstrap\css\bootstrap-reboot.min.css" />
+    <Content Include="medicalRecord\signupStyle\vendor\bootstrap\css\bootstrap.css" />
+    <Content Include="medicalRecord\signupStyle\vendor\bootstrap\css\bootstrap.min.css" />
+    <Content Include="medicalRecord\signupStyle\vendor\bootstrap\js\bootstrap.js" />
+    <Content Include="medicalRecord\signupStyle\vendor\bootstrap\js\bootstrap.min.js" />
+    <Content Include="medicalRecord\signupStyle\vendor\bootstrap\js\popper.js" />
+    <Content Include="medicalRecord\signupStyle\vendor\bootstrap\js\popper.min.js" />
+    <Content Include="medicalRecord\signupStyle\vendor\bootstrap\js\tooltip.js" />
+    <Content Include="medicalRecord\signupStyle\vendor\countdowntime\countdowntime.js" />
+    <Content Include="medicalRecord\signupStyle\vendor\css-hamburgers\hamburgers.css" />
+    <Content Include="medicalRecord\signupStyle\vendor\css-hamburgers\hamburgers.min.css" />
+    <Content Include="medicalRecord\signupStyle\vendor\daterangepicker\daterangepicker.css" />
+    <Content Include="medicalRecord\signupStyle\vendor\daterangepicker\daterangepicker.js" />
+    <Content Include="medicalRecord\signupStyle\vendor\daterangepicker\moment.js" />
+    <Content Include="medicalRecord\signupStyle\vendor\daterangepicker\moment.min.js" />
+    <Content Include="medicalRecord\signupStyle\vendor\jquery\jquery-3.2.1.min.js" />
+    <Content Include="medicalRecord\signupStyle\vendor\perfect-scrollbar\perfect-scrollbar.css" />
+    <Content Include="medicalRecord\signupStyle\vendor\perfect-scrollbar\perfect-scrollbar.min.js" />
+    <Content Include="medicalRecord\signupStyle\vendor\select2\select2.css" />
+    <Content Include="medicalRecord\signupStyle\vendor\select2\select2.js" />
+    <Content Include="medicalRecord\signupStyle\vendor\select2\select2.min.css" />
+    <Content Include="medicalRecord\signupStyle\vendor\select2\select2.min.js" />
+    <Content Include="medicalRecord\signupStyle\vendor\vol.aspx" />
+    <Content Include="medicalRecord\volunteerStyle\bootstrap\css\bootstrap.min.css" />
+    <Content Include="medicalRecord\volunteerStyle\bootstrap\js\bootstrap.min.js" />
+    <Content Include="medicalRecord\volunteerStyle\img\01.jpg" />
+    <Content Include="medicalRecord\volunteerStyle\img\02.jpg" />
+    <Content Include="medicalRecord\volunteerStyle\img\03.jpg" />
+    <Content Include="medicalRecord\volunteerStyle\img\DR1.png" />
+    <Content Include="medicalRecord\volunteerStyle\img\ffffff-2880x1800.png" />
+    <Content Include="medicalRecord\volunteerStyle\img\hos3.png" />
+    <Content Include="medicalRecord\volunteerStyle\img\Illustration of two volunteers offering help to a doctor, holding hearts with a cross sign.png" />
+    <Content Include="medicalRecord\volunteerStyle\js\jquery.min.js" />
+    <Content Include="medicalRecord\voluteer.aspx" />
+    <Content Include="medicalRecord\health.aspx" />
+    <Content Include="medicalRecord\login.aspx" />
+    <Content Include="medicalRecord\aboutUs.aspx" />
+    <Content Include="medicalRecord\WebForm7.aspx" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\jquery-3.3.1.js" />
+    <Content Include="Scripts\jquery-3.3.1.min.js" />
+    <Content Include="Scripts\jquery-3.3.1.slim.js" />
+    <Content Include="Scripts\jquery-3.3.1.slim.min.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\WebForms\DetailsView.js" />
+    <Content Include="Scripts\WebForms\Focus.js" />
+    <Content Include="Scripts\WebForms\GridView.js" />
+    <Content Include="Scripts\WebForms\Menu.js" />
+    <Content Include="Scripts\WebForms\MenuStandards.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjax.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxApplicationServices.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxComponentModel.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxCore.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxGlobalization.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxHistory.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxNetwork.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxSerialization.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxTimer.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebForms.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebServices.js" />
+    <Content Include="Scripts\WebForms\SmartNav.js" />
+    <Content Include="Scripts\WebForms\TreeView.js" />
+    <Content Include="Scripts\WebForms\WebForms.js" />
+    <Content Include="Scripts\WebForms\WebParts.js" />
+    <Content Include="Scripts\WebForms\WebUIValidation.js" />
+    <Content Include="Site.Master" />
+    <Content Include="ViewSwitcher.ascx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Bundle.config" />
+    <Content Include="Site.Mobile.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="About.aspx.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="About.aspx.designer.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Contact.aspx.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contact.aspx.designer.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="CRUD.cs" />
+    <Compile Include="medicalRecord\correct.aspx.cs">
+      <DependentUpon>correct.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="medicalRecord\correct.aspx.designer.cs">
+      <DependentUpon>correct.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="medicalRecord\showVL.aspx.cs">
+      <DependentUpon>showVL.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="medicalRecord\showVL.aspx.designer.cs">
+      <DependentUpon>showVL.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="medicalRecord\loginAdmin2.aspx.cs">
+      <DependentUpon>loginAdmin2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="medicalRecord\loginAdmin2.aspx.designer.cs">
+      <DependentUpon>loginAdmin2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="medicalRecord\medicalMaster.Master.cs">
+      <DependentUpon>medicalMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="medicalRecord\medicalMaster.Master.designer.cs">
+      <DependentUpon>medicalMaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="medicalRecord\homePage.aspx.cs">
+      <DependentUpon>homePage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="medicalRecord\homePage.aspx.designer.cs">
+      <DependentUpon>homePage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="medicalRecord\emrgency.aspx.cs">
+      <DependentUpon>emrgency.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="medicalRecord\emrgency.aspx.designer.cs">
+      <DependentUpon>emrgency.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="medicalRecord\nonHealth.aspx.cs">
+      <DependentUpon>nonHealth.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="medicalRecord\nonHealth.aspx.designer.cs">
+      <DependentUpon>nonHealth.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="medicalRecord\team.aspx.cs">
+      <DependentUpon>team.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="medicalRecord\team.aspx.designer.cs">
+      <DependentUpon>team.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="medicalRecord\volunteerStyle\NonHealthVolunteers\WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="medicalRecord\volunteerStyle\NonHealthVolunteers\WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="medicalRecord\signup.aspx.cs">
+      <DependentUpon>signup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="medicalRecord\signup.aspx.designer.cs">
+      <DependentUpon>signup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="medicalRecord\signupStyle\vendor\vol.aspx.cs">
+      <DependentUpon>vol.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="medicalRecord\signupStyle\vendor\vol.aspx.designer.cs">
+      <DependentUpon>vol.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="medicalRecord\voluteer.aspx.cs">
+      <DependentUpon>voluteer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="medicalRecord\voluteer.aspx.designer.cs">
+      <DependentUpon>voluteer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="medicalRecord\health.aspx.cs">
+      <DependentUpon>health.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="medicalRecord\health.aspx.designer.cs">
+      <DependentUpon>health.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="medicalRecord\login.aspx.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="medicalRecord\login.aspx.designer.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="medicalRecord\aboutUs.aspx.cs">
+      <DependentUpon>aboutUs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="medicalRecord\aboutUs.aspx.designer.cs">
+      <DependentUpon>aboutUs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="medicalRecord\WebForm7.aspx.cs">
+      <DependentUpon>WebForm7.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="medicalRecord\WebForm7.aspx.designer.cs">
+      <DependentUpon>WebForm7.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Mobile.Master.cs">
+      <DependentUpon>Site.Mobile.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Mobile.Master.designer.cs">
+      <DependentUpon>Site.Mobile.Master</DependentUpon>
+    </Compile>
+    <Compile Include="ViewSwitcher.ascx.cs">
+      <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewSwitcher.ascx.designer.cs">
+      <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.3.1.min.map" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>52490</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:52490/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

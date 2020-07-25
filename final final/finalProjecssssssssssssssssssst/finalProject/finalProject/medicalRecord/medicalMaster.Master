@@ -1,0 +1,61 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="medicalMaster.master.cs" Inherits="finalProject.medicalRecord.medicalMaster" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kaushan+Script">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/untitled.css">
+    
+
+    <style type="text/css">
+        .auto-style2 {
+            width: 223px;
+            height: 84px;
+        }
+    </style>
+</head>
+<body id="page-top">
+    <form id="form1" runat="server">
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <nav class="navbar navbar-dark navbar-expand-lg fixed-top bg-dark" id="mainNav" style="color: rgb(1,6,11);filter: blur(0px);background-color: rgb(24,119,213);">
+            <a href="aboutUs.aspx">
+            <img src="assets/img/برء-removebg-preview.png "  class="auto-style2"  />
+                </a>
+        <div class="container">
+         <button data-toggle="collapse" data-target="#navbarResponsive" class="navbar-toggler navbar-toggler-right" type="button" data-toogle="collapse" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-bars"></i></button>
+            <div
+                class="collapse navbar-collapse" id="navbarResponsive" style="background-repeat: no-repeat;width: 818px;">
+                <ul class="nav navbar-nav ml-auto text-uppercase">
+                    <li class="nav-item" ><a class="nav-link js-scroll-trigger" href="homePage.aspx">home</a></li>
+                   
+                    
+                    <li class="nav-item" role="presentation"><a class="nav-link js-scroll-trigger" href="aboutUs.aspx">About us</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link js-scroll-trigger" href="team.aspx">Team</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link js-scroll-trigger" href="#contact">Contact</a></li>
+                </ul>
+                <ul class="nav navbar-nav">
+                    <li class="nav-item" role="presentation"></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="login.aspx">LOGIN!</a></li>
+                </ul>
+        </div>
+        </div>
+    </nav>
+    </form>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    <script src="assets/js/agency.js"></script>
+</body>
+</html>
